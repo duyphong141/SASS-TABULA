@@ -1,0 +1,106 @@
+body .container {
+    position: relative;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 100;
+    .navbar-brand {
+        padding: 0;
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .navbar {
+        .nav-item {
+            padding: 0 $pd-1 0 0;
+            .nav-link {
+                padding: 0;
+                @include styleText($color-dark-1, $fs-1, $fw-2);
+                transition: all 0.2s;
+                &:hover {
+                    color: $color-purple-1;
+                }
+            }
+        }
+    }
+
+    .header_contact {
+        .social a {
+            margin-left: $mg-1;
+            font-size: 13px;
+        }
+        display: flex;
+        justify-content: end;
+    }
+
+    .header_contact {
+        .tele a {
+            margin: $mg-2;
+            padding: $pd-2 $pd-3;
+            font-weight: $fw-3;
+            box-shadow: 0 0 0 3em $color-purple-1 inset;
+            border-radius: 50px;
+            font-size: 13.5px;
+            color: $color-white-1;
+            transition: all 0.3s;
+            text-decoration: none;
+            &:hover {
+                box-shadow: 0 0 0 1px #b61984 inset;
+                color: #b61984;
+            }
+        }
+        .social a {
+            color: $color-dark-1;
+            transition: all 0.2s;
+            &:hover {
+                color: $color-purple-1;
+            }
+        }
+    }
+}
+
+header.nav-fixed {
+    background-color: $color-white-1;
+}
+
+// responsive
+@include responsive("extra-large") {
+    header {
+        .navbar-brand img {
+            height: 48px;
+            width: 48px;
+        }
+        .navbar-toggler.collapsed {
+            display: block;
+        }
+
+        .nav-link {
+            text-align: center;
+          
+        }
+
+        
+    }
+    header .navbar .nav-item .nav-link {
+        font-size: 17px;
+    }
+    header .navbar .nav-item {
+        padding: 0;
+    }
+    header .header_contact {
+        display: block;
+        margin-top: 50px;
+        text-align: center;
+    }
+        header .social {
+            margin-top: 15px;
+        }
+}
+
