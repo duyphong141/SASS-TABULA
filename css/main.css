@@ -156,7 +156,7 @@ header.nav-fixed {
   border: none;
 }
 .teacher .card:hover {
-  box-shadow: 0px 8px 20px 6px rgba(158, 158, 158, 0.75);
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
 }
 .teacher .card-body {
   text-align: center;
@@ -372,6 +372,9 @@ footer .social i {
 }
 footer .social i:hover {
   color: #181818;
+}
+footer .contact-detail {
+  margin-bottom: 1em;
 }
 footer .contact-detail p {
   display: inline;
